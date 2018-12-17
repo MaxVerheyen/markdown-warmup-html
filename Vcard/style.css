@@ -64,14 +64,10 @@ body{
 	background:white;
 }
 
-#test{
-	margin-top: 20vh;
-}
-
 #vcard{
 	width: 60vw;
 	height: auto;
-	margin: 0 auto;
+	margin-top: 20vh;
 	padding: 30px;
 	text-align: justify;
 	background: #00B291;
@@ -132,7 +128,6 @@ body{
   /* responsive vcard */
   @media only screen and (max-width: 1400px) {
 	.container {
-		display: inline-grid;
 		grid-template-columns: auto stretch;
 		grid-template-rows: stretch stretch;
 	  }
@@ -142,7 +137,6 @@ body{
 		grid-column-end: 1;
 		grid-row-start: 1;
   		grid-row-end: 1;
-		margin-top: 20px;
 	  }
 	
 	  .list {
@@ -154,7 +148,6 @@ body{
 	  }
 	
 	  .list ul{
-		list-style-type: none;
 		line-height: 25px;
 		padding: 0;
 	  }
@@ -171,12 +164,9 @@ body{
 
   @media only screen and (max-width: 840px) {
 
-	#test{
-		margin-top: 40px;
-	}
-
 	#vcard{
 		width: 75vw;
+		margin-top: 40px;
 		padding: 10px;
 	}
 
@@ -186,7 +176,6 @@ body{
 	}
 
 	.container {
-		display: inline-grid;
 		grid-template-columns: stretch;
 		grid-template-rows: stretch stretch stretch;
 	  }
@@ -209,7 +198,6 @@ body{
 	  }
 	
 	  .list ul{
-		list-style-type: none;
 		line-height: 25px;
 		padding: 0;
 	  }
