@@ -1,0 +1,83 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background-color: lightgray;
+    color: grey;
+}
+
+.about, .links, .movies{
+    background-color: white;
+    width: 35vw;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.rounded-image{
+    border-radius: 50%;
+    border: 3px solid lightgray;
+    padding: 0;
+}
+
+.about p{
+    padding: 0px 20px 0 20px;
+}
+
+p{
+    text-align: justify;
+}
+
+h1{
+    font-weight: 700;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+h3{
+    font-weight: 400;
+}
+
+.red{
+    color: #DD5554;
+}
+
+.button{
+    background-color: #DD5554;
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+.button a{
+    color: white;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+    padding: 20px 0 20px 0;
+}
+
+.links li{
+    display: inline-block;
+    padding: 10px;
+}
+
+.links li a{
+    color: grey;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.paragraph{
+    display: inline-block;
+    max-width: 70%;
+}
+
+img{
+    padding: 0 20px 0 0;
+}
