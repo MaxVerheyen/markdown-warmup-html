@@ -11,33 +11,33 @@ body{
 .clearfix:after{clear:both;display:block}
 
 .blink {
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+	animation: blink-animation 1s steps(5, start) infinite;
+	-webkit-animation: blink-animation 1s steps(5, start) infinite;
 	float:left;
-    width:36px;
-    height:36px;
+	width:36px;
+	height:36px;
 	padding-top:9px;
-    border-radius:99px;
-    color:white;
+	border-radius:99px;
+	color:white;
 }
 @keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
+to {
+	visibility: hidden;
+}
 }
 @-webkit-keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
+to {
+	visibility: hidden;
+}
 }
 
 #social {
 	background:#00B291;
-    text-align:center;
+	text-align:center;
 }
 
 #social li:first-child {
-    margin-left: 0;
+	margin-left: 0;
 }
 
 #social ul {
@@ -52,11 +52,11 @@ body{
 
 #social a {
 	float:left;
-    width:36px;
-    height:36px;
+	width:36px;
+	height:36px;
 	padding-top:9px;
-    border-radius:99px;
-    color:white;
+	border-radius:99px;
+	color:white;
 }
 
 #social a:hover {
@@ -67,7 +67,7 @@ body{
 #vcard{
 	width: 60vw;
 	height: auto;
-	margin-top: 20vh;
+	margin: 20vh auto;
 	padding: 30px;
 	text-align: justify;
 	background: #00B291;
@@ -84,34 +84,34 @@ body{
 	display: inline-grid;
 	grid-template-columns: auto stretch stretch;
 	grid-template-rows: stretch;
-  }
+}
 
-  .image {
+.image {
 	grid-column-start: 1;
 	grid-column-end: 1;
 	margin-top: 8px;
-  }
+}
 
-  .list {
+.list {
 	grid-column-start: 2;
 	grid-column-end: 2;
 	padding: 30px 15px 0 25px;
-  }
+}
 
-  .list ul{
+.list ul{
 	list-style-type: none;
 	line-height: 25px;
 	padding: 0;
-  }
+}
 
-  .about {
+.about {
 	grid-column-start: 3;
 	grid-column-end: 3;
 	padding: 0px 15px;
 	line-height: 20px;
-  }
+}
 
-  /* Style buttons */
+/* Style buttons */
 .btn {
 	background-color: #00B291;
 	color: white;
@@ -119,95 +119,95 @@ body{
 	padding: 12px 30px;
 	cursor: pointer;
 	font-size: 20px;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
 	background-color: white;
 	color: #00B291;
-  }
-  /* responsive vcard */
-  @media only screen and (max-width: 1400px) {
-	.container {
+}
+/* responsive vcard */
+@media only screen and (max-width: 1400px) {
+.container {
 		grid-template-columns: auto stretch;
 		grid-template-rows: stretch stretch;
-	  }
+}
 
-	  .image {
-		grid-column-start: 1;
-		grid-column-end: 1;
-		grid-row-start: 1;
-  		grid-row-end: 1;
-	  }
-	
-	  .list {
-		grid-column-start: 2;
-		grid-column-end: 2;
-		grid-row-start: 1;
-		grid-row-end: span 1;
-		padding: 30px 15px 0 25px;
-	  }
-	
-	  .list ul{
-		line-height: 25px;
-		padding: 0;
-	  }
-	
-	  .about {
-		grid-column-start: 1;
-		grid-column-end: col 2-end;
-		grid-row-start: 2;
-		grid-row-end: span 1;
-		padding: 0px 15px;
-		line-height: 20px;
-	  }
-  }
+.image {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 1;
+	grid-row-end: 1;
+}
 
-  @media only screen and (max-width: 840px) {
+.list {
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: span 1;
+	padding: 30px 15px 0 25px;
+}
 
-	#vcard{
-		width: 75vw;
-		margin-top: 40px;
-		padding: 10px;
+.list ul{
+	line-height: 25px;
+	padding: 0;
+}
+
+.about {
+	grid-column-start: 1;
+	grid-column-end: col 2-end;
+	grid-row-start: 2;
+	grid-row-end: span 1;
+	padding: 0px 15px;
+	line-height: 20px;
+}
+}
+
+@media only screen and (max-width: 840px) {
+
+#vcard{
+	width: 75vw;
+	margin-top: 40px;
+	padding: 10px;
+}
+
+#vcard h1{
+	padding: 10px;
+	line-height: 35px;
+}
+
+.container {
+	grid-template-columns: stretch;
+	grid-template-rows: stretch stretch stretch;
+}
+
+.image {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 1;
+	grid-row-end: span 1;
+	margin-top: 20px;
+	margin: 0 auto;
+}
+
+.list {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 2;
+	grid-row-end: span 1;
+	padding: 15px;
+}
+
+.list ul{
+	line-height: 25px;
+	padding: 0;
+}
+
+.about {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 3;
+	grid-row-end: span 1;
+	padding: 0px 15px;
+	line-height: 20px;
 	}
-
-	#vcard h1{
-		padding: 10px;
-		line-height: 35px;
-	}
-
-	.container {
-		grid-template-columns: stretch;
-		grid-template-rows: stretch stretch stretch;
-	  }
-
-	  .image {
-		grid-column-start: 1;
-		grid-column-end: 1;
-		grid-row-start: 1;
-  		grid-row-end: span 1;
-		margin-top: 20px;
-		margin: 0 auto;
-	  }
-	
-	  .list {
-		grid-column-start: 1;
-		grid-column-end: 1;
-		grid-row-start: 2;
-		grid-row-end: span 1;
-		padding: 15px;
-	  }
-	
-	  .list ul{
-		line-height: 25px;
-		padding: 0;
-	  }
-	
-	  .about {
-		grid-column-start: 1;
-		grid-column-end: 1;
-		grid-row-start: 3;
-		grid-row-end: span 1;
-		padding: 0px 15px;
-		line-height: 20px;
-	  }
-  }
+}
