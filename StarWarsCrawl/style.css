@@ -13,7 +13,7 @@ body {
 .intro {
     position: absolute;
     left: 30%;
-    top: 30%;
+    top: 40%;
     z-index: 1;
     animation: intro 6s ease-out 1s;
     color: lightblue;
@@ -39,7 +39,8 @@ body {
 
 .logo {    
     position: absolute;
-    top: 20%;
+    width: inherit;
+    top: 30%;
     left: 40%;
     z-index: 1;
     margin: auto;
@@ -50,7 +51,7 @@ body {
 @keyframes logo {
     0% {
         width: 18em;        
-        transform: scale(2.75);
+        transform: scale(2.5);
         opacity: 1;
     }
     50% {
