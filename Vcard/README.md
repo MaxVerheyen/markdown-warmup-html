@@ -1,1 +1,1 @@
-https://github.com/MaxVerheyen/markdown-warmup-html/Vcard/index.html
+https://maxverheyen.github.io/markdown-warmup-html/Vcard/index.html
