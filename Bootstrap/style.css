@@ -1,11 +1,7 @@
-.test1{
-    background: red;
+.test{
+    border: 1px solid red;
 }
 
-.test2{
-    background: green;
-}
-
-.test3{
-    background: blue;
+div{
+    text-align: center;
 }
