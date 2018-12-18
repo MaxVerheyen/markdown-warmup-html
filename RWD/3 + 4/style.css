@@ -1,0 +1,21 @@
+@media only screen and (min-width: 500px) {
+    #small{
+        width: 66%;
+        float: left;
+    }
+    #medium{
+        width: 33%;
+        float: right;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    #small, #medium, #large{
+        width: 33%;
+        float: right;
+    }
+}
+
+#small, #medium, #large{
+    display: inline-block;
+}

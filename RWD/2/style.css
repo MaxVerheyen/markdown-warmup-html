@@ -1,0 +1,18 @@
+@media only screen and (max-width: 500px) {
+    #medium, #large {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 500px) {
+    #small, #large {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 850px) {
+    #small, #medium {
+      display: none;
+    }
+    #large{
+      display: block;
+    }
+  }
