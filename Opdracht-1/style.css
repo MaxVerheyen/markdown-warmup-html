@@ -1,0 +1,16 @@
+img{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+article{
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 60vh;
+}
+
+h3{
+    text-align: center;
+}
