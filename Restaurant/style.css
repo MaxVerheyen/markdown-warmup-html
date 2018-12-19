@@ -10,7 +10,7 @@
     margin-bottom: 80px;
 }
 
-.adress-informatie h2{
+.adress-informatie h2, .hot-a-la-carte h4, .salads h4, .sushi-rolls h4, .hot-a-la-carte, .salads{
     margin-bottom: 30px;
 }
 
