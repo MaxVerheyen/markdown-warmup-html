@@ -1,0 +1,27 @@
+.page-top{
+    margin-top:85px;
+}
+
+.page {
+    display: none;
+}
+
+.page-active, #pagination-demo .page {
+    display: block;
+}
+
+.active .page-link, .active .page-link:hover{
+    background-color: #007bff;
+    color: white;
+}
+
+img{
+    width: 100%;
+    height: 200px;
+}
+
+@media only screen and (max-width: 767px) {
+    img{
+        margin-bottom: 30px;
+    }
+}
