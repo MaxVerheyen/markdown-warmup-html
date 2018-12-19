@@ -1,5 +1,21 @@
+.test{
+    border: solid 1px red;
+}
+
+.adress-informatie h2{
+    margin-bottom: 30px;
+}
+
+h4{
+    margin-bottom: 20px;
+}
+
+.adress-informatie p{
+    margin-bottom: 10px;
+}
+
 .page-top{
-    margin-top: 85px;
+    margin-top: 80px;
 }
 
 .page {
@@ -10,8 +26,12 @@
     display: block;
 }
 
-.active .page-link, .active .page-link:hover{
-    background-color: #007bff;
+#pagination-demo .page-link{
+    color: rgb(40, 167, 69);
+}
+
+#pagination-demo .active .page-link, .active .page-link:hover{
+    background-color: rgb(40, 167, 69);
     color: white;
 }
 
