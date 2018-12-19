@@ -1,5 +1,5 @@
 .page-top{
-    margin-top:85px;
+    margin-top: 85px;
 }
 
 .page {
@@ -13,6 +13,10 @@
 .active .page-link, .active .page-link:hover{
     background-color: #007bff;
     color: white;
+}
+
+.form{
+    margin: 0 auto;
 }
 
 img{
