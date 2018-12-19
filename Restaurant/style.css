@@ -2,20 +2,24 @@
     border: solid 1px red;
 }
 
+.page-top{
+    margin-top: 80px;
+}
+
+.page-bottom{
+    margin-bottom: 80px;
+}
+
 .adress-informatie h2{
     margin-bottom: 30px;
 }
 
-h4{
+.adress-informatie h4, .form h4{
     margin-bottom: 20px;
 }
 
 .adress-informatie p{
     margin-bottom: 10px;
-}
-
-.page-top{
-    margin-top: 80px;
 }
 
 .page {
@@ -45,7 +49,7 @@ img{
 }
 
 @media only screen and (max-width: 767px) {
-    img{
+    img, .mobile-margin{
         margin-bottom: 30px;
     }
 }
