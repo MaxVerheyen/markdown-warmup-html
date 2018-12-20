@@ -1,0 +1,80 @@
+body .homepage{
+    height: 2500px;
+}
+
+.test{
+    border: solid 1px red;
+}
+
+.page-top{
+    margin-top: 80px;
+}
+
+.page-bottom{
+    margin-bottom: 80px;
+}
+
+.header{
+    margin-bottom: 0;
+}
+
+.restaurant-title h2{
+    margin-bottom: 30px;
+    padding-left:0;
+}
+
+.hot-a-la-carte h4, .salads h4, .sushi-rolls h4, .hot-a-la-carte, .salads{
+    margin-bottom: 30px;
+}
+
+.adress-informatie h4:first-child{
+    margin-top: 0px;
+}
+
+.adress-informatie h4{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.adress-informatie p{
+    margin-bottom: 10px;
+}
+
+.form{
+    margin: 0 auto;
+}
+
+.form h4{
+    margin-bottom: 20px;
+}
+
+.page {
+    display: none;
+}
+
+.page-active, #pagination-demo .page {
+    display: block;
+}
+
+#pagination-demo .page-link{
+    color: rgb(40, 167, 69);
+}
+
+#pagination-demo .active .page-link, .active .page-link:hover{
+    background-color: rgb(40, 167, 69);
+    color: white;
+}
+
+img{
+    width: 100%;
+    height: 200px;
+}
+
+@media only screen and (max-width: 767px) {
+    img, .mobile-margin{
+        margin-bottom: 30px;
+    }
+    .restaurant-title h2{
+        text-align: center;
+    }
+}
