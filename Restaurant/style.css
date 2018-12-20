@@ -77,4 +77,8 @@ img{
     .restaurant-title h2{
         text-align: center;
     }
+
+    .first, .last{
+        display: none;
+    }
 }
