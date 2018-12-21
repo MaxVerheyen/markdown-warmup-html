@@ -10,16 +10,16 @@ img{
     display: block;
 }
 
-.flex-container.no-image{
+.flex-articles.no-image{
     justify-content: space-between;
 }
 
-.flex-container {
+.flex-articles {
     display: flex;
     padding-bottom: 30px;
 }
 
-.flex-container p{
+.flex-articles p{
     max-width: 40%;
 }
 
