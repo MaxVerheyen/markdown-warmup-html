@@ -6,6 +6,27 @@
     border: solid 1px red;
 }
 
+h4{
+    color: rgb(40, 167, 69);
+}
+
+.jumbotron.header{
+    background-color: white;
+    padding: 2rem 0;
+    margin-bottom: 0;
+}
+
+.jumbotron img{
+    max-width: 100%;
+    object-fit: none;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .page-top{
     margin-top: 80px;
 }
@@ -14,13 +35,10 @@
     margin-bottom: 80px;
 }
 
-.header{
-    margin-bottom: 0;
-}
-
 .restaurant-title h2{
     margin-bottom: 30px;
     padding-left:0;
+    color: rgb(40, 167, 69);
 }
 
 .hot-a-la-carte h4, .salads h4, .sushi-rolls h4, .hot-a-la-carte, .salads{
@@ -34,6 +52,7 @@
 .adress-informatie h4{
     margin-top: 20px;
     margin-bottom: 20px;
+    color: black;
 }
 
 .adress-informatie p{
