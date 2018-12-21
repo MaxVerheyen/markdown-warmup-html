@@ -316,6 +316,12 @@ body{
   }
 }
 
+.title{
+	margin-top: 16vh;
+	text-align: center;
+	color: #00B291;
+}
+
 #social {
 	background:#00B291;
     text-align:center;
