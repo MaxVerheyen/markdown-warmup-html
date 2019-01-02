@@ -5,3 +5,17 @@ body {
   font: 100% $font-stack;
   color: $primary-color;
 }
+
+@mixin center-block() { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .foo {
+    @include center-block;
+  }
+
+  h1{
+      text-align: center;
+  }
