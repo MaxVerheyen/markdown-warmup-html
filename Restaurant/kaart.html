@@ -45,7 +45,7 @@
                 </form>
             </div>
         </nav>
-        <div class="container jumbotron page-top page-bottom">
+        <div id="container" class="container jumbotron page-top page-bottom">
             <div class="row">
                 <div class="col-md-6 offset-md-0 col-10 offset-1 hot-a-la-carte">
                     <div class="row">
@@ -176,6 +176,7 @@
     
                 // Get the navbar
                 var navbar = document.getElementById("navbar");
+                var content = document.getElementById("container");
     
                 // Get the offset position of the navbar
                 var sticky = navbar.offsetTop;
@@ -184,8 +185,10 @@
                 function myFunction() {
                 if (window.pageYOffset > sticky) {
                     navbar.classList.add("sticky")
+                    content.classList.add("sticky-fix")
                 } else {
                     navbar.classList.remove("sticky");
+                    content.classList.remove("sticky-fix")
                 }
                 }
         </script>

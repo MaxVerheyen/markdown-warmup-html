@@ -48,7 +48,7 @@
                 </form>
             </div>
         </nav>
-        <div class="container jumbotron page-top page-bottom">
+        <div id="container" class="container jumbotron page-top page-bottom">
             <div class="card-columns">
                 <div class="card">
                 <img class="card-img-top" src="assets/images/pexels-photo-4.jpg" alt="Card image cap">
@@ -120,6 +120,7 @@
     
                 // Get the navbar
                 var navbar = document.getElementById("navbar");
+                var content = document.getElementById("container")
     
                 // Get the offset position of the navbar
                 var sticky = navbar.offsetTop;
@@ -128,8 +129,10 @@
                 function myFunction() {
                 if (window.pageYOffset >= sticky) {
                     navbar.classList.add("sticky")
+                    content.classList.add("sticky-fix")
                 } else {
                     navbar.classList.remove("sticky");
+                    content.classList.remove("sticky-fix")
                 }
                 }
         </script>
