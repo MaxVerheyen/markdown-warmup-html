@@ -16,12 +16,36 @@ $colors: (
     margin-bottom: 80px;
 }
 
-.page-top{
+.page-top {
     @include page-top-margin;
 }
 
-.page-bottom{
+.page-bottom {
     @include page-bottom-margin;
+}
+
+#accordion{
+    @include page-bottom-margin;
+    .card-header{
+        text-align: center;
+    }
+}
+
+.card-columns {
+    @include media-breakpoint-up(sm) {
+        column-count: 2;
+    }
+}
+
+.header {
+    background-color: color(wit);
+    padding: 1rem 0;
+    margin-bottom: 0;
+    img{
+        width: 100%;
+        height: 200px;
+        object-fit: none;
+    }
 }
 
 .sticky {
@@ -35,39 +59,18 @@ $colors: (
     margin-top: 136px;
 }
 
-.header{
-    background-color: color(wit);
-    padding: 2rem 0;
-    margin-bottom: 0;
-    img{
-        object-fit: none;
-    }
-}
-
-img{
-    width: 100%;
-    height: 200px;
+#navbar{
+    padding: 0.5rem 9rem
 }
 
 .form{
     margin: 0 auto;
 }
 
-.page {
-    display: none;
-}
-
-.page-active, #pagination-demo .page {
-    display: block;
-}
-
-#pagination-demo .page-link{
-    color: color(accent);
-}
-
-#pagination-demo .active .page-link, .active .page-link:hover{
-    background-color: color(accent);
-    color: color(wit);
+.carousel-item img{
+    height: 55vh;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .restaurant-title h2{
@@ -98,15 +101,37 @@ h4{
     color: color(accent);
 }
 
-@media only screen and (max-width: 767px) {
-    .page img, .mobile-margin{
-        margin-bottom: 30px;
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    .carousel-item img{
+        height: 30vh;
     }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
     .restaurant-title h2{
         text-align: center;
+    }
+
+    .page img, .mobile-margin{
+        margin-bottom: 30px;
     }
 
     .first, .last{
         display: none;
     }
 }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    #navbar{
+        padding: 0.5rem 1rem;
+    }
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
