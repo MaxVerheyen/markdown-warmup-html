@@ -1,11 +1,14 @@
-/*
-$colors: (
-    accent: rgb(40, 167, 69)
-);
-
-@function color($color-name) {
-    @return map-get($colors, $color-name)
-};*/
+.card-columns {
+    @include media-breakpoint-up(sm) {
+        column-count: 1;
+      }
+    @include media-breakpoint-up(md) {
+        column-count: 2;
+      }
+    @include media-breakpoint-up(lg) {
+        column-count: 3;
+      }
+}
 
 @mixin page-top-margin {
     margin-top: 80px;
@@ -24,15 +27,31 @@ $colors: (
 }
 
 .header {
-    background-color: $white;
-    padding: 1rem 0;
-    margin-bottom: 0;
+    position: relative;
+    h1{
+        color: $white;
+        font-size: 10rem;
+        position: absolute;
+        top: calc(50% - 56px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
     img{
+        height: calc(100vh - 56px);
         width: 100%;
-        height: 200px;
         object-fit: none;
     }
 }
+
+.header::before {
+    content:'';
+    position: absolute;
+    top: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.4);
+  }
 
 .sticky {
     position: fixed;
@@ -46,12 +65,12 @@ $colors: (
 }
 
 #navbar{
-    padding: 0.5rem 9rem
+    padding: 0.5rem 9rem;
 }
 
 .carousel-item img{
     height: 55vh;
-    max-width: 90%;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -100,24 +119,23 @@ $colors: (
     margin-bottom: 2rem;
 }
 
-h4{
-    color: $green;
-}
-
 .form{
     margin: 0 auto;
 }
-
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {}
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
     .carousel-item img{
         height: 30vh;
+        min-width: 100%;
     }
-    #accordion .card-header{
-        text-align: center;
+
+    .header img{
+        max-height: 30vh;
+    }
+
+    .header h1{
+        font-size: 4rem !important;
     }
 }
 
@@ -141,7 +159,12 @@ h4{
     #navbar{
         padding: 0.5rem 1rem;
     }
-}
 
-// Extra large devices (large desktops)
-// No media query since the extra-large breakpoint has no upper bound on its width
+    .header img{
+        height: 60vh;
+    }
+    
+    .header h1{
+        font-size: 7rem;
+    }
+}

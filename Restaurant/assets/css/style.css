@@ -8234,14 +8234,22 @@ h3 {
     border: 1px solid #ddd !important;
   }
 }
-/*
-$colors: (
-    accent: rgb(40, 167, 69)
-);
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 1;
+  }
+}
+@media (min-width: 768px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
 
-@function color($color-name) {
-    @return map-get($colors, $color-name)
-};*/
 .page-top {
   margin-top: 80px;
 }
@@ -8251,14 +8259,30 @@ $colors: (
 }
 
 .header {
-  background-color: #fff;
-  padding: 1rem 0;
-  margin-bottom: 0;
+  position: relative;
+}
+.header h1 {
+  color: #fff;
+  font-size: 10rem;
+  position: absolute;
+  top: calc(50% - 56px);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .header img {
+  height: calc(100vh - 56px);
   width: 100%;
-  height: 200px;
   object-fit: none;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .sticky {
@@ -8278,7 +8302,7 @@ $colors: (
 
 .carousel-item img {
   height: 55vh;
-  max-width: 90%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -8327,10 +8351,6 @@ $colors: (
   margin-bottom: 2rem;
 }
 
-h4 {
-  color: #28a745;
-}
-
 .form {
   margin: 0 auto;
 }
@@ -8338,10 +8358,15 @@ h4 {
 @media (max-width: 767.98px) {
   .carousel-item img {
     height: 30vh;
+    min-width: 100%;
   }
 
-  #accordion .card-header {
-    text-align: center;
+  .header img {
+    max-height: 30vh;
+  }
+
+  .header h1 {
+    font-size: 4rem !important;
   }
 }
 @media (max-width: 991.98px) {
@@ -8360,6 +8385,14 @@ h4 {
 @media (max-width: 1199.98px) {
   #navbar {
     padding: 0.5rem 1rem;
+  }
+
+  .header img {
+    height: 60vh;
+  }
+
+  .header h1 {
+    font-size: 7rem;
   }
 }
 
