@@ -12,16 +12,22 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <div id="testDiv"></div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
         <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous">
         </script>
-        <script>
-                $.ajax({ url: 'https://maxverheyen.github.io/markdown-warmup-html/Ajax/test.html', dataType: 'html', success: function(response) { 
-                    $('#testDiv').html(jQuery(response).find('#content').html()); } 
-                });
+        <script type="text/javascript">
+            function jsonCallback(json){
+                console.log(json);
+              }
+              $.ajax({
+                url: "https://www.blocket.se/recommendation.json?itemKey=82135940&alg=store&n=4&store_id=38694&w=3&ca=11",
+                dataType: "json"
+              });
         </script>
     </body>
 </html>
