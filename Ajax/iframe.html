@@ -32,5 +32,20 @@
         <div id="my-div">
             <iframe id="my-iframe" src="https://mobil.blocket.se/stores/buy-auto" scrolling="no"></iframe>
         </div>
+        <!--<script>
+            var iframe = document.getElementById('my-iframe');
+            console.log(iframe);
+
+            iframe.onload = function(){
+                var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+                console.log(innerDoc);
+
+                var e = innerDoc.getElementsByClassName("history");
+
+                e.onclick = function(){
+                    e.setAttribute("target", "_blank");
+                };
+            };
+        </script>-->
     </body>
 </html>
