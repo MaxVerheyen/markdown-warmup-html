@@ -8234,6 +8234,14 @@ h3 {
     border: 1px solid #ddd !important;
   }
 }
+.page-top {
+  margin-top: 80px;
+}
+
+.page-bottom {
+  margin-bottom: 80px;
+}
+
 @media (min-width: 576px) {
   .card-columns {
     column-count: 1;
@@ -8250,12 +8258,51 @@ h3 {
   }
 }
 
-.page-top {
-  margin-top: 80px;
+#site-header {
+  position: relative;
+  width: 100%;
 }
 
-.page-bottom {
-  margin-bottom: 80px;
+#site-header-media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#site-header-media:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 100%);
+  content: " ";
+}
+
+#site-header-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.site-branding {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 56px);
+}
+.site-branding h1 {
+  position: absolute;
+  color: #fff;
+  font-size: 10rem;
+  top: calc(50% - 56px);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header {
@@ -8285,6 +8332,10 @@ h3 {
   background: rgba(0, 0, 0, 0.4);
 }
 
+#navbar {
+  padding: 0.5rem 9rem;
+}
+
 .sticky {
   position: fixed;
   top: 0;
@@ -8294,10 +8345,6 @@ h3 {
 
 .sticky-fix {
   margin-top: 136px;
-}
-
-#navbar {
-  padding: 0.5rem 9rem;
 }
 
 .carousel-item img {
@@ -8368,6 +8415,13 @@ h3 {
   .header h1 {
     font-size: 4rem !important;
   }
+
+  .site-branding {
+    max-height: 30vh;
+  }
+  .site-branding h1 {
+    font-size: 4rem !important;
+  }
 }
 @media (max-width: 991.98px) {
   .restaurant-title h2 {
@@ -8392,6 +8446,13 @@ h3 {
   }
 
   .header h1 {
+    font-size: 7rem;
+  }
+
+  .site-branding {
+    height: 60vh;
+  }
+  .site-branding h1 {
     font-size: 7rem;
   }
 }
