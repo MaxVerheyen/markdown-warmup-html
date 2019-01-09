@@ -16,36 +16,34 @@
                 height   : 400px;
                 overflow : hidden;
                 position : relative;
+                background: transparent;
             }
             
             #my-iframe
             {
-                position : absolute;
-                top      : -623px;
+                top      : -638px;
                 width    : 500px;
-                height   : 1000px;
-                border   : none;
+                height   : 1018px;
+                position : absolute;
+                z-index: -2;
             }
         </style>
     </head>
     <body>
         <div id="my-div">
-            <iframe id="my-iframe" src="https://mobil.blocket.se/stores/buy-auto" scrolling="no"></iframe>
+            <iframe id="my-iframe" src="https://mobil.blocket.se/stores/buy-auto" frameborder="0" scrolling="no"></iframe>
         </div>
-        <!--<script>
-            var iframe = document.getElementById('my-iframe');
-            console.log(iframe);
+        <script>
+            document.getElementById("my-div").addEventListener("click", redirect);
 
-            iframe.onload = function(){
-                var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-                console.log(innerDoc);
-
-                var e = innerDoc.getElementsByClassName("history");
-
-                e.onclick = function(){
-                    e.setAttribute("target", "_blank");
+            function redirect(){
+                if ( navigator.userAgent.match(/Mobi/) ) {
+                    // We are in a mobile device
+                    window.open("https://mobil.blocket.se/stores/buy-auto");
+                } else {
+                    window.open("https://www.blocket.se/buy-auto?ca=11");
                 };
             };
-        </script>-->
+        </script>
     </body>
 </html>
