@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+            let char = {
+                name : 'Max',
+                age : 27,
+                items_to_give : ["zwaard","schild","harnas"],
+                knock : function(){
+                    console.log( this.name ); 
+                    console.log( this.age );  
+                    console.log( this.items_to_give);
+                }
+            };
+
+            const giveItem = function(e) {
+                char.items_to_give.push(e);
+            };
+
+            giveItem("rugzak");
+            //char.knock();
+
+            let store = {
+                title:  ["zwaard", "bijl", "scepter"],
+                physic: [40, 30, 20],
+                magic: [20, 30, 40],
+                minLevel: [5, 10, 20], 
+                available: [true, true, false]
+            };
+
+           let objects = store.title.length;
+
+            const allObjects = function(){
+                for (i = 0; i < objects; i++) { 
+                    for(let key in store){
+                        console.log( store[key][i] );
+                    };
+                };
+            };
+
+            const availableObjects = function() {
+                for (i = 0; i < objects; i++) {
+                    if (store.available[i] === true){
+                        for(let key in store){
+                            console.log( store[key][i] );
+                        };
+                    };
+                };
+            };
+
+            const minimumLevel = function(){
+                for (i = 0; i < objects; i++) {
+                    if (store.minLevel[i] >= 10){
+                        for(let key in store){
+                            console.log( store[key][i] );
+                        };
+                    };
+                };
+            };
+
+            //allObjects();
+            //availableObjects();
+            //minimumLevel();
+
+            let character = {
+                name : "Max",
+                level : 3,
+                life : 100,
+                weapon : {name:"zwaard", damage: 15}
+            };
+
+            let oponent = {
+                name : "Klootzak",
+                level : 2,
+                life : 100,
+                weapon : {name:"lans", damage: 10}
+            };
+
+            let attack = e =>{
+                let hero = e.name;
+                let weapon = e.weapon.name;
+                let damage = e.level * e.weapon.damage;
+                let enemy;
+                let life;
+
+                switch(true) {
+                    case (hero == "Max"):
+                      enemy = oponent.name;
+                      oponent.life -= damage;
+                      life = oponent.life;
+                    break;
+                    case (hero == "Klootzak"):
+                      enemy = character.name;
+                      character.life -= damage;
+                      life = character.life;
+                    break;
+                  };
+
+                console.log( hero+" doet een aanval met "+weapon+", de schade is "+damage);
+                console.log( enemy+" heeft nog "+life+" leven over");
+            };
+
+            attack(character);
+            attack(oponent);
+        </script>
+    </body>
+</html>

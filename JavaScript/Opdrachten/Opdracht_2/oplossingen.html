@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class='no-js lt-ie9 lt-ie8 lt-ie7'> <![endif]-->
+<!--[if IE 7]>         <html class='no-js lt-ie9 lt-ie8'> <![endif]-->
+<!--[if IE 8]>         <html class='no-js lt-ie9'> <![endif]-->
+<!--[if gt IE 8]><!--> <html class='no-js'> <!--<![endif]-->
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title></title>
+        <meta name='description' content=''>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' href=''>
+    </head>
+    <body>
+        <form>
+            <button name='validate' id='calc1'>Bereken oppervlak van rechthoek</button>
+            <button name='validate' id='calc2'>Bereken de omtrek driehoek</button>
+            <button name='validate' id='calc3'>Bereken de oppervlakte van cirkel</button>
+            <button name='validate' id='calc4'>Display</button>
+            <button name='validate' id='calc5'>Display2</button>
+            <button name='validate' id='calc6'>Wiskundige operatoren</button>
+            <button name='validate' id='calc7'>Display3</button>
+            <button name='validate' id='calc8'>Switch</button>
+            <button name='validate' id='calc9'>Dag van de week</button>
+            <button name='validate' id='calc10'>Letter P</button>
+            <button name='validate' id='calc11'>For-lus</button>
+            <button name='validate' id='calc12'>For-lus</button>
+            <button name='validate' id='calc13'>Celsius, Fahrenheit en Kelvin</button>
+            <button name='validate' id='calc14'>BMI</button>
+        </form>
+        <script>
+            document.getElementById('calc1').onclick = function surfaceRectangle(){
+                let let1 = prompt('Geef de lengte');
+                let let2 = prompt('Geef de breedte');
+                let calc1 = let1*let2;
+                alert('de oppervlakte van de rechthoek bedraagt '+calc1+' m^2');
+            }
+
+            document.getElementById('calc2').onclick = function perimeterTriangle(){
+                let let3 = parseInt(prompt('Geef de lengte van de eerste zijde'));
+                let let4 = parseInt(prompt('Geef de lengte van de tweede zijde'));
+                let let5 = parseInt(prompt('Geef de lengte van de derde zijde'));
+                let calc2 = (let3+let4+let5);
+                alert('de omtrek van de driehoek bedraagt '+calc2+'cm');
+            }
+
+            document.getElementById('calc3').onclick = function surfaceCircle(){
+                let straal = prompt('wat is de straal?');
+                let calc3 = (straal * straal * Math.PI);
+                alert('De oppervlakte van de cirkel bedraagt '+calc3+' m^2');
+            }
+
+            document.getElementById('calc4').onclick = function display(){
+                let a = 3;
+                let b = 2;
+    
+                function tripple(x){
+                    x *= 3;
+                    alert(x);
+                }
+
+                tripple(a);
+                tripple(b);
+            }
+
+            let tab = [-2, 1, 4];
+
+            document.getElementById('calc5').onclick = function display2() {
+                function add(x){
+                    x+= 2;
+                    alert(x);
+                };
+    
+                for(let i = 0; i < tab.length; i++){
+                    add(tab[i]);
+                };
+            };
+
+            document.getElementById('calc7').onclick = function display3(){
+                function subtract(x){
+                    x -= tab[0];
+                    if (x >= 0){
+                        alert(x+' is positief');
+                    } else {
+                        alert(x+' is negatief');
+                    }
+                };
+
+                for(let i = 0; i < tab.length; i++){
+                    subtract(tab[i]);
+                };
+            }
+
+            function candd(){
+                let d = 0;
+                let c = 2;
+
+                number1(d,c);
+                number2(d,c);
+                number3(d,c);
+                number4(d,c);
+                number5(d,c);
+                number6(1,c);
+                number7(1,c);
+                number8(1,c);
+                number9(1,c);
+                number10(1,c);
+
+                function number1(d,c){
+                    d = c++;
+                    console.log('d = c++');
+                    console.log('d = '+d);
+                    console.log('c = '+c);
+                }
+                function number2(d,c){
+                    d = ++c;
+                    console.log('d = ++c');
+                    console.log('d = '+d);
+                    console.log('c = '+c);
+                }
+                function number3(d,c){
+                    d = c--;
+                    console.log('d = c--');
+                    console.log('d = '+d);
+                    console.log('c = '+c);
+                }
+                function number4(d,c){
+                    d = --c;
+                    console.log('d = --c');
+                    console.log('d = '+d);
+                    console.log('c = '+c);
+                }
+                function number5(d,c){
+                    d += c++;
+                    console.log('d += c++');
+                    console.log('d = '+d);
+                    console.log('c = '+c);
+                }
+                function number6(d,c){
+                    d += ++c;
+                    console.log('d += ++c');
+                    console.log('d = '+d);
+                    console.log('c = '+c);
+                }
+                function number7(d,c){
+                    d -= c++;
+                    console.log('d -= c++');
+                    console.log('d = '+d);
+                    console.log('c = '+c);
+                }
+                function number8(d,c){
+                    d-=++c;
+                    console.log('d -= c++');
+                    console.log('d = '+d);
+                    console.log('c = '+c);
+                }
+                function number9(d,c){
+                    d += c--;
+                    console.log('d += c--');
+                    console.log('d = '+d);
+                    console.log('c = '+c);
+                }
+                function number10(d,c){
+                    d += --c;
+                    console.log('d += --c');
+                    console.log('d = '+d);
+                    console.log('c = '+c);
+                }
+            }
+
+            candd();
+
+            document.getElementById('calc8').onclick = function makeChoice(){
+                let smurf = prompt('1 2 of 3?');
+                switch(true) {
+                    case smurf == '1':
+                      alert('1. Thank you');
+                      break;
+                    case smurf == '2':
+                      alert('2. Hello');
+                      break;
+                    case smurf == '3':
+                      alert('3. Good bye');
+                      break;
+                  }
+            };
+
+            document.getElementById('calc9').onclick = function weekday(){
+                let h = new Date();
+                let dag = h.getDay();
+
+                switch(true) {
+                    case dag == '0':
+                        alert('0. Zondag');
+                        break;
+                    case dag == '1':
+                        alert('1. Maandag');
+                        break;
+                    case dag == '2':
+                        alert('2. Dinsdag');
+                        break;
+                    case dag == '3':
+                        alert('3. Woensdag');
+                        break;
+                    case dag == '4':
+                        alert('4. Donderdag');
+                        break;
+                    case dag == '5':
+                        alert('5. Vrijdag');
+                        break;
+                    case dag == '6':
+                        alert('6. Zaterdag');
+                        break;
+                }
+            };
+
+            document.getElementById('calc10').onclick = function testWhile(){
+                let string = prompt('geef een zin');
+                let found = string.match(/[a-z]/g);
+                //let aantal = 0;
+                
+                for(let i = 0; i < found.length; i++){
+                    if (found[i] == 'p') {
+                        //aantal +=1;
+                        alert(string);
+                    }
+                }
+            }
+
+            document.getElementById('calc11').onclick = function sum(){
+                let optelling = 0;
+
+                for(let i = 0; i < 3; i++){
+                    let nummers = parseInt(prompt('geef een nummer'));
+                    optelling += nummers;
+                }
+                alert(optelling);  
+            }
+
+/*
+                let arr1 = [];
+
+                for(let i = 0; i < 5; i++){
+                    let addition = 0;
+                    let answer = Number(prompt('geef een getal'));
+                    if (Number.isInteger(answer) == false){
+                        alert(answer+' is geen geheel getal')
+                        answer = Number(prompt('geef een geheel getal'));
+                    } else{
+                        arr1.push(answer);
+                        for(let i = 0; i < arr1.length; i++){
+                            addition += arr1[i];
+                        }
+                        console.log(arr1);
+                        console.log(addition);
+                    }
+                }
+*/
+            document.getElementById('calc12').onclick = function calcAverage(){
+                let answer;
+                let arr1 = [];
+
+                for(let i = 0; i < 5; i++){
+                    answer = Number(prompt('geef een getal'));
+                    isInt(answer);
+                }
+
+                function isInt(e){
+                    let addition = 0;
+                    
+                    if(Number.isInteger(e) == false || e < 0) {
+                        alert(answer+' is geen positief geheel getal');
+                        answer = Number(prompt('geef een positief geheel getal'));
+                        isInt(answer);
+                    }else{
+                        arr1.push(answer);
+                        for(let i = 0; i < arr1.length; i++){
+                            addition += arr1[i];
+                        }
+                        console.log('er zitten '+arr1.length+' elementen in de array');
+                        console.log('het totaal bedraagt '+addition);
+                        console.log('het gemiddelde bedraagt '+(addition/arr1.length));
+                    }
+                }
+            }
+
+            document.getElementById('calc13').onclick = function TemperatureConversion(){
+                let degrees = prompt('0. End of the program\n1. Celsius to Fahrenheit\n2. Celsius to Kelvin\n3.Fahrenheit to Celsius\n4. Fahrenheit to Kelvin\n5.Kelvin to Celsius\n6.Kelvin to Fahrenheit');
+                let amount = Number(prompt('Hoeveel graden?'));
+                
+                let celsius;
+                let fahrenheit;
+                let kelvin;
+
+                switch(true) {
+                    case degrees == '0':
+                        alert('0. Zondag');
+                        break;
+                    case degrees == '1':
+                        fahrenheit = (amount*(9/5))+32;
+                        alert(amount+' graden Celsius = '+fahrenheit+' graden Fahrenheit');
+                        break;
+                    case degrees == '2':
+                        kelvin = amount+273.15;
+                        alert(amount+' graden Celsius = '+kelvin+' graden Kelvin');
+                        break;
+                    case degrees == '3':
+                        celsius = (amount-32)/(9/5);
+                        alert(amount+' graden Fahrenheit = '+celsius+' graden Celsius');
+                        break;
+                    case degrees == '4':
+                        kelvin = ((amount-32)*(5/9))+273.15;
+                        alert(amount+' graden Fahrenheit = '+kelvin+' graden Kelvin');
+                        break;
+                    case degrees == '5':
+                        celsius = amount-273.15;
+                        alert(amount+' graden Kelvin = '+celsius+' graden Celsius');
+                        break;
+                    case degrees == '6':
+                        fahrenheit = (amount*(9/5))-459.67;
+                        alert(amount+' graden Kelvin = '+fahrenheit+' graden Fahrenheit');
+                        break;
+                }
+            }
+
+            document.getElementById('calc14').onclick = function calcAverage(){
+                let gewicht = Number(prompt('Wat is uw gewicht?'));
+                let hoogte = Number(prompt('Wat is uw hoogte?'));
+                let bmi = gewicht/(hoogte*hoogte);
+    
+                switch(true) {
+                    case bmi < 16.5:
+                        alert('Uw bmi is '+bmi+'\nUw bmi is < 16,5 = ondervoeding of hongersnood');
+                        break;
+                    case bmi < 18.5:
+                        alert('Uw bmi is '+bmi+'\nUw bmi is < 18,5 = dunheid');
+                        break;
+                    case bmi < 25:
+                        alert('Uw bmi is '+bmi+'\nUw bmi is < 25 = normale bouw');
+                        break;
+                    case bmi < 30:
+                        alert('Uw bmi is '+bmi+'\nUw bmi is < 30 = overgewicht');
+                        break;
+                    case bmi < 35:
+                        alert('Uw bmi is '+bmi+'\nUw bmi is < 35 = matige overgewicht');
+                        break;
+                    case bmi < 40:
+                        alert('Uw bmi is '+bmi+'\nUw bmi is < 40 = ernstige overgewicht');
+                        break;
+                    case bmi > 40:
+                        alert('Uw bmi is '+bmi+'\nUw bmi is > 40 = morbide obesitas');
+                        break;
+                }
+            }
+/*
+            let empty = "";
+            let full = "*******************************************************************************************************************************************************************************";
+
+            for(let i = 0; i < 175; i++){
+                empty += "*";
+                console.log(empty);
+            }
+
+            for(let j = 0; j < 175; j++){
+                full = full.slice(0, -1);
+                console.log(full);
+            }
+*/
+        </script>
+    </body>
+</html>
